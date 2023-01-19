@@ -93,10 +93,9 @@ body{
 }
 
 .input-info.error.mandatory{
+    color: #E73550;
     font-size: 12px;
     font-weight: 300;
-    color: #E73550;
-    align-self: flex-end;
 }
 
 .completed{
@@ -106,8 +105,9 @@ body{
     color: #0F7B0F;
 }
 .no-completed{
+    color: #E73550;
+    font-weight: 300;
     margin-top: 10px;
     font-size: 12px;
-    font-weight: 300;
-    color: #E73550;
+    
 }

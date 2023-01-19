@@ -1,75 +1,72 @@
-const form = document.getElementsByClassName('.infos-itens');
-const username = document.getElementById('#name');
-const email = document.getElementById('#email');
-const phone = document.getElementById('#phone');
-const cpf = document.getElementById('#cpf');
-const password = document.getElementById('#password');
+const form = form[0].addEventListener;
+const username = document.getElementById('for-name');
+const email = document.getElementById('form-email');
+const phone = document.getElementById('form-phone');
+const cpf = document.getElementById('form-cpf');
+const password = document.getElementById('form-password');
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
-
     registerInputs();
 });
 
 function registerInputs() {
-    const usernameValue = username.value.trim();
-    const emailValue = email.value.trim();
-    const phoneValue = phone.value.trim();
-    const cpfValue = cpf.value.trim();
-    const passwordValue = password.value.trim();
+    const usernameValue = username.value();
+    const emailValue = email.value();
+    const phoneValue = phone.value();
+    const cpfValue = cpf.value();
+    const passwordValue = password();
 
-    if (usernameValue === '') {
+    if(usernameValue === ''){
         error(username, "*Campo Obrigatório*");
-    } else {
+    }else{
         successRegister(username);
     }
     
-    if (emailValue === '') {
+    if(emailValue === ''){
         errorRegister(email, "*Campo Obrigatório*");
-    } else {
+    }else{
         successRegister(email);
     }
     
-    if (phoneValue === '') {
+    if(phoneValue === ''){
         errorRegister(phone, "*Campo Obrigatório*");
-    } else {
+    }else{
         successRegister(phone);
     }
     
-    if (cpfValue === '') {
+    if(cpfValue === ''){
         errorRegister(cpf, "*Campo Obrigatório*");
-    } else {
+    }else{
         successRegister(cpf);
     }
     
-    if (passwordValue === '') {
+    if(passwordValue === ''){
         errorRegister(password, "*Campo Obrigatório*");
-    } else {
+    }else{
         successRegister(password);
     }
-};
+}
 
 function errorRegister(input, message) {
-    const inputInfo = input.parentElement;
-    const main = inputInfo.querySelector('main');
-    const register = document.querySelector('.validar');
+    const inputInfos = input.parentElement;
+    const span = inputInfos.querySelector('span');
+    const register = document.querySelector('validar');
 
-    main.innerText = message;
-
+    span.innerText = message;
     register.className = 'Register no-completed';
-    register.innerText = 'Campos obrigatórios não registrados.';
-
-    inputInfo.className = 'input-info error';
+    register.innerText = 'Campo obrigatório não registrado';
+    inputInfos.className = 'input-info error';
 };
 
 function successRegister(input) {
-    const inputInfo = input.parentElement;
-    const validate = document.querySelector('.validar');
-    const span = inputInfo.querySelector('span');
+    const inputInfos = input.parentElement;
+    const register = document.querySelector('.validar');
+    const span = inputInfos.querySelector('span');
 
     span.innerText = '';
 
     register.className = 'Register completed';
     register.innerText = 'Sucesso!';
-    inputInfo.className = 'input-info';
+    inputInfos.className = 'input-info';
 };
