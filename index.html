@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+    <title> jUMPY </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="logo-dnc">
+        <img src="dnc.svg" alt="Logo-DNC">
+        </div>
+    </header>
+<section class="info-principal">
+    <div id="logo-jumpy">
+        <img src="jumpy.svg" alt="Logo-Jumpy">
+    </div>
+    <div id="subtitle">
+        <h3> Bem vindo ao Jumpy! </h3>
+    </div>
+</section>
+    <section class="form-group">
+        <form class="infos-itens">
+            <div class="form-formatting">
+                <label class="info-text" form="action" method="post" id="name"> Nome Completo: </label><br>
+                <input class="form-input" type="text" placeholder="Nome Completo" style="width: 600px;" id="nome" >
+                <main class="mandatory"></main>
+            </div>
+
+            <div class="form-formatting">
+                <label class="info-text" form="actionEmail" method="post" id="email"> E-mail: </label><br>
+                <input class="form-input" type="email" placeholder="email@email.com" style="width: 600px;" >
+                <main class="mandatory"></main>
+            </div>
+                
+            <div class="form-formatting" >   
+                <label class="info-text" form="action" method="post" id="phone"> Telefone: </label><br>
+                <input class="form-input" type="number" placeholder="(00) 00000-0000" style="width: 600px;" >
+                <main class="mandatory"></main>        
+            </div>
+
+            <div class="form-formatting" >
+                <label class="info-text" form="" method="post" id="cpf"> CPF: </label><br>
+                <input class="form-input" type="number" placeholder="000.000.000.00" style="width: 600px;" >
+                <main class="mandatory"></main>
+            </div>
+
+            <div class="form-formatting" >
+                <label class="info-text" form="inputPassword" method="post" id="password"> Senha: </label><br>
+                <input class="form-input" type="password" placeholder="**********" style="width: 600px;" >
+                <main class="mandatory"></main>
+            </div>
+            <button onclick="btn-register()" type="submit" class="btn"> Cadastrar </button>
+            <main id="validar"></main>    
+
+        </form>
+    </section>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
