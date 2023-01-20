@@ -5,27 +5,28 @@
     padding: 0;
 }
 
-.form-formatting{
-    margin: 15px 0px;
+.form-formatting {
+    margin: 10px 0px;
     
 }
-body{
+body {
     background-color: #2D2D2D;
     color: #fff;
 }
 
-#logo-dnc img{
+#logo-dnc img {
     padding: 50px 0 0 50px;
     width: 100px;
 }
 
-.info-principal{
+.info-principal {
     display: flex;
     flex-direction: column;
     text-align: center;
     margin-top: 15px;
 }
-#logo-jumpy img{
+
+#logo-jumpy img {
     width: 250px;
     display: flex;
     flex-direction: column;
@@ -34,68 +35,70 @@ body{
     margin-left: 50px;
 }
 
-#subtitle h3{
+#subtitle h3 {
     font-size: 30px;
     font-family: Arial, Helvetica, sans-serif;
     
 }
 
-.form-group{
+.form-group {
     display: flex;
     flex-direction: column;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     font-family: Raleway;
 }
 
-.info-text{
+.infos-itens {
+    max-width: 50%;
+    margin: auto;
+}
+
+.info-text {
     font-family: 'Raleway',Verdana, Geneva, Tahoma, sans-serif;
     font-style: SemiBold;
     font-size: 20px;
     line-height: 23px;
-    margin-left: 460px;
-    
 }
+
 .input-infos input::placeholder {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    width: 600px;
-    padding-right: 90%;
-    
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
 }
-.form-input{
+
+.form-input {
     border-radius: 5px;
-    height: 30px;
     border: none;
-    display: flex;
-    flex-direction: column;
-    margin-left: 455px;
-    padding-left: 5px;
+    height: 30px;
+    padding: 5px;
 }
 
-.mandatory{
-    height: 6px;
-}
-
-.btn{
+.btn {
     background-color: #0C70F2;
     color: #fff;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 700;
     padding: 15px 10px;
     border: none;
     border-radius: 7px;
     margin-top: 20px;
     display: flex;
     justify-content: center;
-    width: 610px;
-    margin-left: 450px;
-    margin-bottom: 50px;
-    cursor: pointer;
+    width: 100%;
 }
 
-.input-info.error.mandatory{
+.form-formatting {
+    display: flex;
+    flex-direction: column;
+}
+
+.mandatory{
+    height: 3px;
+}
+
+.form-formatting.error .mandatory {
     color: #E73550;
     font-size: 12px;
     font-weight: 300;
+    align-self: flex-end;
 }
 
 .completed{
@@ -109,5 +112,4 @@ body{
     font-weight: 300;
     margin-top: 10px;
     font-size: 12px;
-    
 }

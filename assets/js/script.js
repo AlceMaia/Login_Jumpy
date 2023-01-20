@@ -1,9 +1,9 @@
-const form = form[0].addEventListener;
-const username = document.getElementById('for-name');
-const email = document.getElementById('form-email');
-const phone = document.getElementById('form-phone');
-const cpf = document.getElementById('form-cpf');
-const password = document.getElementById('form-password');
+const form = document.querySelector('.infos-itens');
+const username = document.querySelector('#form-name');
+const email = document.querySelector('#form-email');
+const phone = document.querySelector('#form-phone');
+const cpf = document.querySelector('#form-cpf');
+const password = document.querySelector('#form-password');
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -11,14 +11,14 @@ form.addEventListener('submit', (event) => {
 });
 
 function registerInputs() {
-    const usernameValue = username.value();
-    const emailValue = email.value();
-    const phoneValue = phone.value();
-    const cpfValue = cpf.value();
-    const passwordValue = password();
+    const usernameValue = username.value;
+    const emailValue = email.value;
+    const phoneValue = phone.value;
+    const cpfValue = cpf.value;
+    const passwordValue = password.value;
 
     if(usernameValue === ''){
-        error(username, "*Campo Obrigatório*");
+        errorRegister(username, "*Campo Obrigatório*");
     }else{
         successRegister(username);
     }
@@ -51,12 +51,14 @@ function registerInputs() {
 function errorRegister(input, message) {
     const inputInfos = input.parentElement;
     const span = inputInfos.querySelector('span');
-    const register = document.querySelector('validar');
+    const register = document.querySelector('.validar');
 
     span.innerText = message;
-    register.className = 'Register no-completed';
+
+    register.className = 'validar no-completed';
     register.innerText = 'Campo obrigatório não registrado';
-    inputInfos.className = 'input-info error';
+
+    inputInfos.className = 'form-formatting error';
 };
 
 function successRegister(input) {
@@ -66,7 +68,7 @@ function successRegister(input) {
 
     span.innerText = '';
 
-    register.className = 'Register completed';
+    register.className = 'validar completed';
     register.innerText = 'Sucesso!';
-    inputInfos.className = 'input-info';
+    inputInfos.className = 'form-formatting';
 };
